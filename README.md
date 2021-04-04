@@ -1,2 +1,3 @@
 # pyBEM_structure
-A tool for fast BEM CSS folder structure generation
+
+Скриптик для быстрой начальной генерации структуры папок и файлов для верстки по методологии БЭМ.
