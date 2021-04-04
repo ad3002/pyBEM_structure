@@ -5,8 +5,7 @@
 #@author: Aleksey Komissarov
 #@contact: ad3002@gmail.com
 
-
-import os
+import os, sys
 
 snippet = '''.%s%s {
 }
@@ -51,10 +50,6 @@ bem = {
       "e": ["__logo", "__lang-link"],
       "m": [("__lang-link", "_active", ""),],
     },
-    "content": {
-      "e": [],
-      "m": [],
-    },
     "lead": {
       "e": ["__title", "__subtitle", "__image", "__figure", "__caption"],
       "m": [],
@@ -86,6 +81,10 @@ bem = {
 }
 
 ### Backbone generation
+
+if os.path.isdir(root):
+  print("Error: a project folder (%s) exists. Please delete it." % root)
+  sys.exit(3)
 
 for folder in folders:
     folder = os.path.join(root, folder)
